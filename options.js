@@ -7,12 +7,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       : 'from the extension'
   );
   if (request.greeting == 'hello') {
-    SpongeAllElements(elementStringArray);
-    console.log('helloHelloHello');
-    console.log('hellohellohello');
-    console.log('helloHelloHello');
-    console.log('helloHelloHello');
-    console.log('helloHelloHello');
+    spongeAllElements(elementStringArray);
   }
 });
 
@@ -35,29 +30,25 @@ const elementStringArray = [
 ];
 
 const imageArray = document.querySelectorAll('img');
-function spongeBobImage(array) {
+function spongebobImage(array) {
   for (let el of array) {
     el.src =
       'https://i.kym-cdn.com/entries/icons/original/000/022/940/mockingspongebobbb.jpg';
   }
 }
 
-function SpongeAllElements(array) {
+function spongeAllElements(array) {
   array.forEach((elementType) => {
     //set variable equal to queryselectorAll for each element type
     const nodeList = document.querySelectorAll(elementType);
     //invoke spongebobify on the variable we just created
-    SpongeBobify(nodeList);
-    spongeBobImage(imageArray);
+    spongebobify(nodeList);
+    //change all images to spongebob
+    spongebobImage(imageArray);
   });
-  //change all images to
 }
 
-//'div',
-
-//invoke function
-
-function SpongeBobify(nodeList) {
+function spongebobify(nodeList) {
   for (let el of nodeList) {
     //each ele is a p tag.
     //set variable equal to an empty string
@@ -82,9 +73,3 @@ function SpongeBobify(nodeList) {
     }
   }
 }
-
-// let startOnPageButton = document.getElementById('startOnPage');
-// console.log(document);
-// startOnPageButton.addEventListener('click', () =>
-//   SpongeAllElements(elementStringArray)
-// );
