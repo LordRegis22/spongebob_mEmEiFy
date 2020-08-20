@@ -31,7 +31,16 @@ const elementStringArray = [
   'td',
   'th',
   'pre',
+  'span',
 ];
+
+const imageArray = document.querySelectorAll('img');
+function spongeBobImage(array) {
+  for (let el of array) {
+    el.src =
+      'https://i.kym-cdn.com/entries/icons/original/000/022/940/mockingspongebobbb.jpg';
+  }
+}
 
 function SpongeAllElements(array) {
   array.forEach((elementType) => {
@@ -39,7 +48,9 @@ function SpongeAllElements(array) {
     const nodeList = document.querySelectorAll(elementType);
     //invoke spongebobify on the variable we just created
     SpongeBobify(nodeList);
+    spongeBobImage(imageArray);
   });
+  //change all images to
 }
 
 //'div',
