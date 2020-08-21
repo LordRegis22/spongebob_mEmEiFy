@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  background-color: yellow;
+  height: 150px;
+  width: 300px;
+}
+
+h1.animated {
+  font-size: 2.2rem;
+  transition: all 3000ms;
+  transition-timing-function: ease-in;
+}
+
+.display-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 60%;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #fa8672;
+  box-shadow: 1px 1px #cb8071;
+}
+
+button:active {
+  border: none;
+  outline: none;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
